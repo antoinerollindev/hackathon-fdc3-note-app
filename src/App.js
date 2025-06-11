@@ -65,7 +65,7 @@ function App() {
         return getFDC3NoteError(`Invalid context type. Expected 'fdc3.note', received '${context.type}'`);
       }
 
-      const { noteId, content, streamId, messageId } = context.id;
+      const { noteId, content, from } = context.id;
 
       if (!noteId || !content) {
         console.error('Missing required fields in AddNote intent');
@@ -75,8 +75,7 @@ function App() {
       const noteData = {
         id: noteId,
         content,
-        streamId,
-        messageId,
+        from,
         timestamp: new Date().toISOString()
       };
       console.log('Prepared note data:', noteData);
