@@ -180,8 +180,7 @@
 }
 
 .note-meta {
-  display: flex;
-  justify-content: space-between;
+  text-align: left;
   margin-top: 12px;
   padding-top: 8px;
   border-top: 1px solid #eee;
